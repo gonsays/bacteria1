@@ -677,9 +677,4 @@ if (process.env.OPENSHIFT_NODEJS_IP !== undefined) {
     });
 }
 
-server.post('/*', function(req, res){
-
-  res.sendfile('index.html');
-});
-
 
