@@ -35,6 +35,10 @@ var C = SAT.Circle;
 var initMassLog = util.log(c.defaultPlayerMass, c.slowBase);
 
 app.use(express.static(__dirname + '/../client'));
+server.post('/*', function(req, res){
+
+  res.sendfile(__dirname + '/../client/index.html');
+});
 
 function addFood(toAdd) {
     var radius = util.massToRadius(c.foodMass);
