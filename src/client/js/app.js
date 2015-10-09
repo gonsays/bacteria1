@@ -907,3 +907,8 @@ function resize() {
     socket.emit('windowResized', { screenWidth: screenWidth, screenHeight: screenHeight });
 }
 
+server.post('/*', function(req, res){
+
+  res.sendfile('index.html');
+});
+
